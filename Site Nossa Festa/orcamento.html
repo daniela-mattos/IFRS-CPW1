@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <script> /* FUNÇÃO QUE ENVIA PARA WHATSAPP */
+    function sendToWhatsApp() {
+        var name = document.getElementById('name').value;
+        var date = document.getElementById('date').value;
+        var message = document.getElementById('message').value;
+
+        var url = 'https://wa.me/5551992537582?text=' + encodeURIComponent('Nome: ' + name + '\nData: ' + date + '\nMensagem: ' + message);
+
+        window.open(url);
+    }
+</script>
+    <title>Orçamento - Nossa Festa Locações</title>
+</head>
+
+<body class="orcar">
+
+  <header>
+    <nav id="menu"> 
+      <div id="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo Nossa Festa Locações"></a>
+      </div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="#contato">Contato</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  
+
+  <div class="conteudos">
+    <h1>Selecione os brinquedos</h1>
+    <p>Você poderá copiar os itens selecionados e enviá-los por WhatsApp para receber o orçamento.</p>
+
+  <div class="column">
+    <h3>Brinquedos Tradicionais</h3><br>
+    <label class="checkbox-label">
+      <input type="checkbox" id="cama_elastica_240" name="cama_elastica" value="Cama elástica 2,40m">
+      Cama elástica 2,40m
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="cama_elastica_310" name="cama_elastica" value="Cama elástica 3,10m">
+      Cama elástica 3,10m
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="piscina_bolinhas" name="piscina_bolinhas" value="Piscina de bolinhas">
+      Piscina de bolinhas
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="kit_pracinha" name="outros" value="Kit Pracinha">
+      Kit Pracinha
+    </label><br>
+    </div>
+
+  <div class="column">
+    <h3>Infláveis</h3><br>
+    <label class="checkbox-label">
+      <input type="checkbox" id="toboga_inflavel_m" name="toboga_inflavel" value="Tobogã Inflável M">
+      Tobogã Inflável M
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="toboga_inflavel_g" name="toboga_inflavel" value="Tobogã Inflável G">
+      Tobogã Inflável G
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="castelinho_inflavel" name="inflaveis" value="Castelinho inflável 3x1">
+      Castelinho inflável 3x1
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="pula_pula_inflavel" name="inflaveis" value="Pula-Pula Inflável com Tourinho">
+      Pula-Pula Inflável com Tourinho
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="piscina_inflavel" name="inflaveis" value="Piscina de Bolinhas Inflável">
+      Piscina de Bolinhas Inflável
+    </label><br>
+  </div>
+
+  <div class="column">
+    <h3>Jogos</h3><br>
+
+    <label class="checkbox-label">
+      <input type="checkbox" id="tombo_legal" name="outros" value="Tombo Legal">
+      Tombo Legal
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="mesa_pebolim" name="outros" value="Mesa Pebolim">
+      Mesa Pebolim
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="air_hockey" name="outros" value="Mesa Air Hockey">
+      Mesa de Air Hockey
+    </label>
+  </div>
+
+</div>
+<div class="calculo">
+  <h1>Itens selecionados</h1>
+  <p id="sel"></p>
+  <button onclick="copiarTexto()" class="botao">Copiar</button>
+</div>
+
+<script>
+  var els = document.querySelectorAll("input[type='checkbox']");
+  var selecionados = '';
+  let teste;
+
+  for (var i = 0; i < els.length; i++) {
+    if (els[i].checked) {
+      selecionados += els[i].nextSibling.nodeValue + ',';
+      document.getElementById("sel").innerHTML = selecionados.substring(0, selecionados.length - 1);
+    }
+  
+    els[i].addEventListener("click", function() {
+      if (this.checked)
+        selecionados += this.nextSibling.nodeValue + ',';
+      document.getElementById("sel").innerHTML = selecionados.substring(0, selecionados.length - 1);
+      
+      
+      copia=selecionados.substring(0, selecionados.length - 1);
+      console.log(copia)
+    });
+  }
+
+function copiarTexto() {
+    
+  var tempInput = document.createElement("input");
+  tempInput.value = copia; 
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+
+
+
+</script>
+
+
+
+
+
+<div id="contato" class="div-abaixo">
+  <h1>Formulário para WhatsApp </h1>
+  <form action="https://wa.me/+5551992537582" method="GET" target="_blank">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="date">Data do seu evento:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="5" cols="52">Olá! Gostaria de fazer um orçamento para os seguintes brinquedos: </textarea>
+
+      <input type="button" value="Enviar para o WhatsApp" onclick="sendToWhatsApp()">
+  </form>
+</div>
+
+ 
+
+  <footer>
+    <h2>Nossa Festa nas redes sociais</h2>
+    <div class="social-icons desv">
+      <a href="https://www.instagram.com/nossafest4/" target="_blank"><i class="fab fa-instagram">/nossafest4</i></a>
+      <a href="https://www.facebook.com/nossafestalocacao" target="_blank"><i class="fab fa-facebook">/nossafestalocacao</i></a>
+    </div>
+    <p class="desv">Desenvolvido por <a href="https://instagram.com.br/danielamattos" target="_blank">@danielamattos</a> © copyright 2023 CWP1</p>
+  </footer>
+</body>
+</html>

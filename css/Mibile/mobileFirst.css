@@ -1,0 +1,88 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 100;
+    text-align: left;
+}
+
+header {
+    background-color: rgb(65, 130, 214);
+    padding: 1em;
+    color: whitesmoke;
+}
+
+section {
+    padding: 0.5em;
+}
+
+section article {
+    border: 1px solid rgb(224, 203, 110) ;
+    margin: 0.5em;
+    border-radius: 10px;
+}
+
+section article img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+section article h2 {
+    color: rgb(65, 130, 214);
+    margin: 0.5em;
+}
+
+section article p {
+    color: grey;
+    margin: 0.5em;
+}
+
+footer {
+    background-color:  rgb(65, 130, 214);
+    padding: 1.5em 0.5em;
+    text-align: center;
+    color: whitesmoke;
+}
+
+footer p {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+/* outros formatos */
+
+@media screen and (min-width: 768px) {
+    section {
+        display: grid; /*ativa o modo gri*/
+        grid-template-columns: 1fr 1fr; 
+    }
+    
+}
+
+@media screen and (min-width: 960px) {
+    section {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        width: 1000px;
+        margin: auto;
+    }
+   
+}
+

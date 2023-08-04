@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <script> /* FUNÇÃO QUE ENVIA PARA WHATSAPP */
+    function sendToWhatsApp() {
+        var name = document.getElementById('name').value;
+        var date = document.getElementById('date').value;
+        var message = document.getElementById('message').value;
+
+        var url = 'https://wa.me/5551992537582?text=' + encodeURIComponent('Nome: ' + name + '\nData: ' + date + '\nMensagem: ' + message);
+
+        window.open(url);
+    }
+</script>
+  <title>Nossa Festa Locação de Brinquedos</title>
+</head>
+<body>
+  <header>
+    <nav id="menu">
+      <div id="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo Nossa Festa Locações"></a>
+      </div>
+      <ul>
+        <li><a href="#promos">Promoções</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="/~96636513004/orcamento.html">Orçamento</a></li>
+      </ul>
+    </nav>
+    <div class="clear"></div>
+  </header>
+  
+  <div class="div-largura-total">
+    <div id="banner">
+      <div class="carousel">
+        <div class="carousel-slide">
+          <img src="img/imagem1.jpg" alt="Logo e Telefone de Contato">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/imagem2.jpg" alt="Kit de Brinquedos">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/imagem3.jpg" alt="Sugestão de Kit para Locação">
+        </div>
+      </div>
+      <a class="carousel-prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="carousel-next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+  </div>
+
+  <div class="div-largura-total">
+    <section id="promos" class="article">
+      <article>
+           <img src="img/promo-1.jpg" alt="Kit de Brinquedos">
+           <h2>Kids A</h2>
+           <p> Perfeito para convidados de idades variadas. Vem com tombo legal, cama elástica, mesa de Air Hockey e parquinho com escorregador e gangorrinhas. 
+            <br><br> É diversão para Família toda!</p>
+      </article>
+  
+      <article>
+           <img src="img/promo-2.jpg" alt="Kit Família com Brinquedos Diversos">
+           <h2>Kit Família</h2>
+           <p>Esse é o Kit de brinquedos perfeito para manter todos entretidos na sua festa. Vem com cama elástica, piscina de bolinhas, mesa de air hockey, pebolim e parquinho.
+            <br><br> A turma inteira vai se divertir! </p>
+      </article>
+  
+      <article>
+           <img src="img/promo-3.jpg" alt="Kit de Brinquedos e Jogos para Locação">
+           <h2>Kit Garotada</h2>
+           <p> Kit ideal para crianças menores. Vem com um Inflavél 3 em 1, com escorregador, pula-pula e tourinho, cama elástica, escorregador e duas gangorrinhas. 
+            <br> <br> Os pequenos adoram! </p>
+      </article></section>
+  
+  </div>
+
+  <div class="tutorial">
+    <div id="conteiner">
+    <div class="icones"><img class="service" src="img/1-agenda.png" alt="Consulte a data.">Consulte a data.</div>
+    <div class="icones"><img class="service" src="img/2-play.png" alt="Escolha os brinquedos">Escolha os brinquedos.</div>
+    <div class="icones"><img class="service" src="img/3-marcado.png" alt="Confirme a reserva">Confirme a reserva.</div>
+    <div class="icones"><img class="service" src="img/4-entrega.png" alt="A festa chega até você">A festa chega até você.</div>
+</div>
+  <div class="pg_orcamento">
+    <p><a href="orcamento.html"> Solicitar orçamento</a></p>
+  </div>
+</div>
+  
+  
+  <div id="contato" class="div-abaixo">
+    <h1>Formulário para WhatsApp </h1>
+    <form action="https://wa.me/5551992537582" method="GET">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="date">Data do seu evento:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="5" cols="52">Olá! Gostaria de fazer um orçamento. </textarea>
+
+        <input type="button" value="Enviar para o WhatsApp" onclick="sendToWhatsApp()">
+    </form>
+  </div>
+
+  <footer>
+    <h2>Nossa Festa nas redes sociais</h2>
+    <div class="social-icons desv">
+      <a href="https://www.instagram.com/nossafest4/" target="_blank"><i class="fab fa-instagram">/nossafest4</i></a>
+      <a href="https://www.facebook.com/nossafestalocacao" target="_blank"><i class="fab fa-facebook">/nossafestalocacao</i></a>
+    </div>
+    <p class="desv">Desenvolvido por <a href="https://instagram.com.br/danielamattos" target="_blank">@danielamattos</a> © copyright 2023 CWP1</p>    
+  </footer>
+</body>
+</html>

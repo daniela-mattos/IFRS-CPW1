@@ -1,0 +1,80 @@
+div {
+    border-radius: 3px;
+}
+#header {
+    position: static;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border: 0;
+    background-color: blueviolet;
+    margin: 0 0 5px 0;
+    text-align: center;
+    }
+
+#fundo {
+    position: relative;
+    height: 500px;
+    /* background-color: yellow; */
+}
+    
+#menu {
+    position: absolute;
+    left: 0; 
+    width: 32%;
+    height: 91%;
+    padding: 20px 0 25px 0;
+    border: 0;
+    background-color: green;
+    margin: 0;
+    text-align: center;
+    }
+
+#conteudo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 67%;
+    height: 31%;
+    padding: 20px 0 25px 0;
+    border: 0;
+    background-color: aqua;
+    margin: 0;
+    text-align: center;
+    }    
+
+#footer {
+    /* position: absolute; */
+    clear: both;
+    bottom: 0;
+    /* width: 100%; */
+    padding: 10px;
+    border: 0;
+    background-color: blueviolet;
+    margin: 0;
+    text-align: center;
+    }
+
+#direito {
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+    width: 35%;
+    height: 50%;
+    padding: 20px 0 25px 0;
+    border: 0;
+    background-color: rgb(3, 107, 107);
+    margin: 0;
+    text-align: center;
+}
+#esquerdo {
+    position: absolute;
+    bottom: 0;
+    left: 33%;
+    width: 31%;
+    height: 50%;
+    padding: 20px 0 25px 0;
+    border: 0;
+    background-color: rgb(8, 40, 221);
+    margin: 0;
+    text-align: center;
+}

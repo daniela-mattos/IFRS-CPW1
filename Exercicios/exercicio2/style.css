@@ -1,0 +1,55 @@
+div {
+    border-radius: 3px;
+}
+#header {
+    position: static;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border: 0;
+    background-color: blueviolet;
+    margin: 0 0 5px 0;
+    text-align: center;
+    }
+
+#fundo {
+    position: relative;
+    height: 500px;
+    /* background-color: yellow; */
+}
+    
+#menu {
+    position: absolute;
+    left: 0; 
+    width: 32%;
+    height: 90%;
+    padding: 20px 0 25px 0;
+    border: 0;
+    background-color: green;
+    margin: 0;
+    text-align: center;
+    }
+
+#conteudo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 67%;
+    height: 90%;
+    padding: 20px 0 25px 0;
+    border: 0;
+    background-color: aqua;
+    margin: 0;
+    text-align: center;
+    }    
+
+#footer {
+    /* position: absolute; */
+    clear: both;
+    bottom: 0;
+    /* width: 100%; */
+    padding: 10px;
+    border: 0;
+    background-color: blueviolet;
+    margin: 0;
+    text-align: center;
+    }

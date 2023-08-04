@@ -1,0 +1,259 @@
+/* Estilos básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+ }
+
+
+/* MENU */
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 999;
+}
+
+#logo {
+  margin: 0 30px 0 40px
+}
+
+#logo img {
+  height: 40px; 
+}
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li {
+  font-family:Arial, Helvetica, sans-serif;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: #4a76b8;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#menu ul li a:hover {
+  color: orangered; 
+}
+
+
+/* Estilos para as divs */
+
+.div-largura-total {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin: 10px;
+}
+
+.tutorial {
+  background-color: #e86f29;
+  height: auto;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+#conteiner {
+  /* position: relative; */
+  width: 100%;
+  margin: auto;
+}
+
+.icones {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .itens {
+  display: block;
+  width: 25%;
+  text-align: center;
+
+} */
+
+.service {
+  width: 250px;
+  padding: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.div-abaixo {
+  /* background-color: #fff; */
+  padding: 20px;
+  margin: 10px;
+  clear: both;
+}
+
+.div-abaixo h1 {
+  text-align: center;
+  color: #4a76b8;
+  padding: 5% 0 5% 0;
+}
+
+
+/* Estilos para o rodapé */
+footer {
+  background-color: #e86f29;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+
+
+/*área do banner*/
+#banner {
+  position: relative;
+  overflow: hidden; 
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  transition: transform 3s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* formulário  */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+/*Área dos produtos*/
+
+section article {
+  border: 1px solid rgb(224, 203, 110) ;
+  margin: 0.5em;
+  border-radius: 5px;
+  height: 100%;
+
+}
+
+section article img {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  
+}
+
+section article h2 {
+color: #4a76b8;
+  margin: 0.5em;
+}
+
+section article p {
+  color: grey;
+  margin: 0.5em;
+}
+
+/* outros formatos */
+
+@media screen and (min-width: 768px) {
+  .article {
+      display: grid; /*ativa o modo grid*/
+      grid-template-columns: 1fr 1fr; 
+  }
+
+
+@media screen and (min-width: 960px) {
+  .article {
+      grid-template-columns: 1fr 1fr 1fr; 
+  }
+
+@media screen and (min-width: 1024px) {
+  .article {
+      width: 1024px;
+      margin: auto;   
+  }
+
+}
